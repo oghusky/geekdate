@@ -9,6 +9,8 @@ connectDB();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+app.use('/user',require('./routes/user-routes'))
+
 app.listen(PORT,()=>{
     console.log("http://localhost:"+3001);
 });
